@@ -1,60 +1,68 @@
 ## AffectNet Emotion Classification
 
-**Classifique emoções em vídeos com precisão utilizando modelos de Deep Learning.**
+**Classify emotions in videos with precision using Deep Learning models.**
 
 ![output](output/output.gif)
 
-Este projeto implementa localmente o modelo EMO-AffectNet, desenvolvido por @ElenaRyumina, para classificar emoções a partir de vídeos. A arquitetura combina redes neurais convolucionais (CNNs) para extração de características e Long Short-Term Memory (LSTM) para análise temporal, permitindo uma compreensão mais profunda das expressões faciais ao longo do tempo.
+This project locally implements the EMO-AffectNet model, developed by @ElenaRyumina, to classify emotions from videos. The architecture combines Convolutional Neural Networks (CNNs) for feature extraction and Long Short-Term Memory (LSTM) for temporal analysis, allowing for a deeper understanding of facial expressions over time.
 
-### Requisitos:
+### Detected Emotions
 
-* Python 3.10
-* Bibliotecas listadas em `requirements.txt`
+The model is trained on the **AffectNet** dataset to detect the following emotions:
 
-### Download de Modelos:
+- **Neutral**
+- **Happy**
+- **Sad**
+- **Surprise**
+- **Fear**
+- **Disgust**
+- **Anger**
 
-* **Modelos Backbone:** [Baixe aqui](https://drive.google.com/drive/folders/1ahiKWj6gJ7yC2ye6vBEy0GJfdeguplq4)
-* **Modelos LSTM:** [Baixe aqui](https://drive.google.com/drive/folders/1m7ATft4STye2Wiip3BZNUGIkducHC0SD)
+### Requirements
 
-### Funcionamento:
+- Python 3.10
+- Libraries listed in `requirements.txt`
 
-1. **Extração de Características:** As CNNs processam cada quadro do vídeo, extraindo características relevantes das expressões faciais.
-2. **Análise Temporal:** A LSTM recebe as sequências de características e modela as dependências temporais, capturando a evolução das emoções ao longo do vídeo.
-3. **Classificação:** A saída da LSTM é utilizada para classificar a emoção predominante no vídeo.
+### Model Downloads
 
-### Como Usar:
+- **Backbone Models:** [Download here](https://drive.google.com/drive/folders/1ahiKWj6gJ7yC2ye6vBEy0GJfdeguplq4)
+- **LSTM Models:** [Download here](https://drive.google.com/drive/folders/1m7ATft4STye2Wiip3BZNUGIkducHC0SD)
 
-1. **Clone o Repositório:**
+### How It Works
+
+1. **Feature Extraction:** CNNs process each frame of the video, extracting relevant features from facial expressions.
+2. **Temporal Analysis:** The LSTM receives the sequence of features and models the temporal dependencies, capturing the evolution of emotions throughout the video.
+3. **Classification:** The output of the LSTM is used to classify the predominant emotion in the video.
+
+### How to Use
+
+1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/seu-usuario/Affectnet-Emotion-Classification.git
+   git clone https://github.com/thiagosmpa/affectnet.git
    ```
 
-2. **Instale as Dependências:**
+2. **Install Dependencies:**
    ```bash
    pip install -r requirements.txt
    ```
 
-3. **Baixe os Modelos:**
-   * Faça o download dos modelos backbone e LSTM dos links fornecidos acima.
-   * Coloque os modelos nas pastas apropriadas dentro do projeto.
+3. **Download the Models:**
+   - Download the backbone and LSTM models from the links provided above.
+   - Place the models in the appropriate folders within the project.
 
-4. **Execute o Script Principal:**
+4. **Run the Main Script:**
    ```bash
-   python main.py --video_path caminho/para/seu/video.mp4
+   jupyter notebook inferLSTM.ipynb
    ```
 
-### Contribuições:
+### Contributions
 
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests.
+Contributions are welcome! Feel free to open issues or pull requests.
 
-### Licença:
+### Notes
 
-Este projeto está licenciado sob a [MIT License](LICENSE).
+- Make sure you have the necessary hardware and software requirements to run the project.
+- Adapt the code to your specific needs, such as changing the input video path or customizing the models used.
+- Explore the code and models to deepen your understanding of emotion classification and deep learning.
 
-**Observações:**
-
-* Certifique-se de ter os requisitos de hardware e software adequados para executar o projeto.
-* Adapte o código para suas necessidades específicas, como alterar o caminho para o vídeo de entrada ou personalizar os modelos utilizados.
-* Explore o código e os modelos para aprofundar seu conhecimento sobre classificação de emoções e deep learning.
-
-**Com o AffectNet Emotion Classification, desvende as emoções por trás das expressões faciais em vídeos!** 
+**With AffectNet Emotion Classification, uncover the emotions behind facial expressions in videos!**
